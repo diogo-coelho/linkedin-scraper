@@ -1,0 +1,39 @@
+{
+  "name": "linkedin-scraper",
+  "version": "1.0.0",
+  "description": "API de raspagem de dados de informações de contatos e empresas no LinkedIn utilizando a biblioteca Puppeteer",
+  "main": "server.js",
+  "scripts": {
+    "start": "tsc && node build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogo-coelho/linkedin-scraper.git"
+  },
+  "keywords": [
+    "API",
+    "web",
+    "scraping",
+    "LinkedIn",
+    "Puppeteer"
+  ],
+  "author": "Diogo Coelho <diogooliveiracoelho@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogo-coelho/linkedin-scraper/issues"
+  },
+  "homepage": "https://github.com/diogo-coelho/linkedin-scraper#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-import": "^2.27.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
