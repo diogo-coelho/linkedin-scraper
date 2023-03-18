@@ -4,7 +4,7 @@
   "description": "API de raspagem de dados de informações de contatos e empresas no LinkedIn utilizando a biblioteca Puppeteer",
   "main": "server.js",
   "scripts": {
-    "start": "tsc && node build/server.js",
+    "start": "tsc && node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
