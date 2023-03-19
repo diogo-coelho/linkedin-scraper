@@ -14,10 +14,6 @@ class Server {
         this._server = this.configureApplication()
     }
 
-    private configureServer (): void {
-        
-    }
-
     private async configureApplication (): Promise<http.Server> {
         return new Promise((resolve, reject) => {
             Database.isConnected().then(async () => {
