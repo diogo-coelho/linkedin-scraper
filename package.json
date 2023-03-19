@@ -1,0 +1,56 @@
+{
+  "name": "linkedin-scraper",
+  "version": "1.0.0",
+  "description": "API de raspagem de dados de informações de contatos e empresas no LinkedIn utilizando a biblioteca Puppeteer",
+  "main": "main.js",
+  "scripts": {
+    "develop": "tsc && node dist/main.js",
+    "build": "webpack --mode production",
+    "prestart": "npm run build",
+    "start": "node dist/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogo-coelho/linkedin-scraper.git"
+  },
+  "keywords": [
+    "API",
+    "web",
+    "scraping",
+    "LinkedIn",
+    "Puppeteer"
+  ],
+  "author": "Diogo Coelho <diogooliveiracoelho@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogo-coelho/linkedin-scraper/issues"
+  },
+  "homepage": "https://github.com/diogo-coelho/linkedin-scraper#readme",
+  "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/express": "^4.17.17",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-import": "^2.27.5",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.2"
+  }
+}

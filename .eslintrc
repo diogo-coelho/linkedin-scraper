@@ -1,0 +1,22 @@
+{
+    "env": {
+      "browser": true,
+      "es5": true,
+      "node": true
+    },
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "tsconfig.json",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "import"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ]
+}
