@@ -28,6 +28,7 @@ function onError (error: NodeJS.ErrnoException): void {
             console.error(`[ ${ date.formattedDate } ] : ${ bind } já está em uso`)
             fs.appendFileSync(path.join(__dirname, `../logs/error.log`), 
                 `[ ${ date.formattedDate } ] : ${ bind } já está em uso \r\n`)
+            break
 
         default:
             httpServer.closeDatabase()
@@ -50,7 +51,7 @@ httpServer.server.then((server: http.Server) => {
     server.on('listening', () => onListening(server))
     server.setTimeout(0)
 })
-.catch((err: any) => {
+.catch((err: Error) => {
     console.log(`[ ${ date.formattedDate } ] : Não foi possível inicializar o servidor ${ err.stack }`)
     fs.appendFileSync(path.join(__dirname, '../logs/error.log'), 
         `[ ${ date.formattedDate } ] : Não foi possível inicializar o servidor ${ err.stack } \r\n`);
