@@ -2,6 +2,7 @@
 
 import Express from 'express'
 import BodyParser from 'body-parser'
+import CompanyRouter from '../routes/CompanyRouter'
 
 class Application {
     private _express: Express.Application
@@ -24,6 +25,7 @@ class Application {
     private routes (): void {
         const router: Express.Router = Express.Router()
         this._express.use('/', router)
+        this._express.use('/api/v1/companies', CompanyRouter);
     }
 }
 
