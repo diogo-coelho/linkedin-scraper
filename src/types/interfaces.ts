@@ -1,3 +1,5 @@
+import { Document } from 'mongoose'
+
 export type IRequestBody = {
     companyName: string,
     country: ICountryCodes
@@ -9,6 +11,14 @@ export type ICountryCodes = {
 }
 
 export type IDataURL = {
-    empresa: string,
+    companyName: string,
     href: string
+}
+
+export interface IURLFromLinkedInDAO extends Document {
+    _id?: string,
+    companyName: string,
+    href: string,
+    created_at?: Date,
+    updated_at?: Date
 }

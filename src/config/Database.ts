@@ -11,7 +11,7 @@ class Database {
     private _database: Promise<Mongoose>
 
     constructor () {
-        this._database = mongoose.connect(`${ process.env.URL_MONGO_DB }`)
+        this._database = mongoose.connect(`${ process.env.URL_MONGO_DB }/${ process.env.DATABASE}`)
     }
 
     public get database (): Promise<Mongoose> {
