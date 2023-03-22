@@ -25,6 +25,7 @@ class CompanyController {
             const linkedInURLService = new LinkedInURLService(requestBody.companyName, requestBody.country)
             const foundURLs = await linkedInURLService.scrapURLFromLinkedIn().then(response => {
                 console.log(response)
+                console.log('tralalalalal')
                 
             })
 
