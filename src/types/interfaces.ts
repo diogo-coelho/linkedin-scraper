@@ -15,7 +15,7 @@ export type IDataURL = {
     href: string
 }
 
-export interface IURLFromLinkedInDAO extends Document {
+export interface IURLFromLinkedInRepository extends Document {
     _id?: string,
     companyName: string,
     href: string,

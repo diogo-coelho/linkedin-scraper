@@ -1,18 +1,18 @@
 'use strict'
 
 import { model, Schema, Model } from 'mongoose'
-import { IURLFromLinkedInDAO } from '../../types/interfaces'
+import { IURLFromLinkedInRepository } from '../../types/interfaces'
 
-class URLFromLinkedInDAO {
-    private _schema: Schema<IURLFromLinkedInDAO>
-    private _model: Model<IURLFromLinkedInDAO>
+class URLFromLinkedInRepository {
+    private _schema: Schema<IURLFromLinkedInRepository>
+    private _model: Model<IURLFromLinkedInRepository>
 
     constructor () {
         this._schema = this.initSchema()
         this._model = model('Url_linkedin', this._schema)
     }
 
-    private initSchema (): Schema<IURLFromLinkedInDAO> {
+    private initSchema (): Schema<IURLFromLinkedInRepository> {
         return new Schema({
             companyName: {
                 type: String,
@@ -33,9 +33,9 @@ class URLFromLinkedInDAO {
         })
     }
 
-    public get model (): Model<IURLFromLinkedInDAO> {
+    public get model (): Model<IURLFromLinkedInRepository> {
         return this._model
     }
 }
 
-export default URLFromLinkedInDAO
+export default URLFromLinkedInRepository

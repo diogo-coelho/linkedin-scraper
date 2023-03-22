@@ -5,13 +5,13 @@ import * as Puppeteer from 'puppeteer'
 import date from '../../utils/FormattedDate'
 import { ICountryCodes, IDataURL } from '../../types/interfaces'
 import LinkedInURLServiceError from '../../errors/LinkedInURLServiceError'
-import URLFromLinkedInDAO from '../models/URLFromLinkedInDAO'
+import repository from '../models/URLFromLinkedInRepository'
 
 class LinkedInURLService {
     private _companyName: string
     private _country: ICountryCodes
     private _response: IDataURL[]
-    static _urlLinkedinDAO: URLFromLinkedInDAO = new URLFromLinkedInDAO();
+    static _urlLinkedinDAO: repository = new repository();
 
     constructor (companyName: string, country: ICountryCodes) {
         this._companyName = companyName
