@@ -14,7 +14,7 @@ class CompanyController {
     public async scrap (req: Request, res: Response): Promise<void> {
         try {
             console.log(`[ ${ date.formattedDate } ] : Nova requisição iniciada`);
-            fs.appendFileSync(path.join(__dirname, '../logs/companies.log'), 
+            fs.appendFileSync(path.join(__dirname, '../../../logs/companies.log'), 
                 `[ ${ date.formattedDate } ] : Nova requisição iniciada \r\n`);
 
             const requestBody: IRequestBody = {

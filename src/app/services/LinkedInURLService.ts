@@ -21,7 +21,7 @@ class LinkedInURLService {
 
     public async scrapURLFromLinkedIn () : Promise<void> {
         console.log(`[ ${ date.formattedDate } ] : URLDoLinkedinService.scrapURLFromLinkedIn iniciado`);
-        fs.appendFileSync(path.join(__dirname, '../logs/companies.log'), 
+        fs.appendFileSync(path.join(__dirname, '../../../logs/companies.log'), 
             `[ ${ date.formattedDate } ] : URLDoLinkedinService.scrapURLFromLinkedIn iniciado \r\n`);
 
         const browser = await this.launchBrowser()
@@ -119,7 +119,7 @@ class LinkedInURLService {
 
                 if (!this._response.some((u: IDataURL) => u.href === url.href)) {
                     console.log(`[ ${ date.formattedDate } ] : empresa: ${ this._companyName }, pais: ${ this._country.code } :: Objeto URL Linkedin { empresa: ${ url.companyName }, href: ${ url.href } }`)
-                    fs.appendFileSync(path.join(__dirname, '../logs/companies.log'), 
+                    fs.appendFileSync(path.join(__dirname, '../../../logs/companies.log'), 
                         `[ ${ date.formattedDate } ] : empresa: ${ this._companyName }, pais: ${ this._country.code } :: Objeto URL Linkedin { empresa: ${ url.companyName }, href: ${ url.href } } \r\n`)
 
                     const response = await LinkedInURLService._urlLinkedinDAO.model.find({ href: url.href })
